@@ -1,0 +1,72 @@
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do corpo */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    background-color: greenyellow; /* Cor de fundo do corpo */
+}
+
+/* Container principal */
+.container {
+    position: relative; /* Posiciona o container de forma relativa */
+    width: 100%; /* Largura total */
+}
+
+/* Conteúdo principal */
+.content {
+    padding: 20px; /* Espaçamento interno */
+    width: 70%; /* Largura de 70% do container */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background: white; /* Cor de fundo branca */
+    margin-top: 100px; /* Espaço adicional para o fundo da imagem */
+}
+
+/* Título principal */
+.title {
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 2em; /* Tamanho da fonte */
+    margin-top: 20px; /* Espaço acima do título */
+}
+
+/* Seção de imagens do bioma */
+.biome-images {
+    display: flex; /* Usa o Flexbox para o layout */
+    justify-content: space-between; /* Espaça as imagens igualmente */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Imagens do bioma */
+.biome-images img {
+    width: 45%; /* Largura de 45% do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Descrição do bioma */
+.description {
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Container de itens (animais e plantas) */
+.item-container {
+    display: flex; /* Usa o Flexbox para o layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+    gap: 10px; /* Espaço entre os itens */
+    flex: 1; /* Permite que o container ocupe o espaço disponível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Item individual (animal ou planta) */
+.item {
+    background: lightgreen; /* Cor de fundo verde claro */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 150px; /* Largura fixa */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Imagem do item */
+.item img {
+    width: 100px; /* Largura fixa */
+    height: auto; /* Mantém a proporção da imagem */
+}

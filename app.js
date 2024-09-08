@@ -20,6 +20,8 @@ function pesquisar() {
     let biomas = "";
     let bioma = "";
     let descricao = "";
+    let animaisLista = "";
+    let plantasLista = "";
     
     // Itera sobre cada item no array de dados
     for (let dado of dados) {
@@ -27,18 +29,21 @@ function pesquisar() {
         descricao = dado.descricao.toLowerCase()
         // Verifica se o título do dado inclui o texto pesquisado
         if (bioma.includes(campoPesquisa) || descricao.includes(campoPesquisa)) {
+            // Concatena os nomes dos animais e plantas
+            animaisLista = dado.animais.map(animal => animal.nome).join(' | ');
+            plantasLista = dado.plantas.map(planta => planta.nome).join(' | ');
             // Concatena o HTML do item encontrado à string 'biomas'
             biomas += `
             <div class="item-resultado">
                 <h2>
-                    <a href="#" target="_blank">${dado.bioma}</a>
+                    <a href="bioma.html?bioma=${encodeURIComponent(dado.bioma)}" target="_blank">${dado.bioma}</a>
                 </h2>
                 <p class="descricao-meta">${dado.descricao}</p>
-                <h3> Vamos conhecer um pouquinho mais sobre cada animal e planta do bioma? </h3>
+                <h3> Vamos conhecer um pouquinho mais sobre quais os animais e plantas o bioma tem? </h3>
                 <h4> Animais </h4>
-                <p>${dado.animais.join(' | ')}|</p>
+                <p> ${animaisLista}|</p>
                 <h4> plantas </h4>
-                <p>${dado.plantas.join(' | ')}|</p>
+                <p>${plantasLista}|</p>
                 <a href="${dado.link}"
                     target="_blank">|Site do IBAMA/National Geografic do bioma escolhido|</a>
             </div>`;

@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
+    background-image: url('http://siscom.ibama.gov.br/PMDBBS_r/PMDBBS_principal_nova_files/biomas.jpg');
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -12,8 +12,10 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-size:100vw; /* Ajusta a imagem para caber dentro do elemento */
+    background-position: center;
 }
-
 
 /* Estiliza os títulos h1 */
 h1 {
@@ -21,6 +23,11 @@ h1 {
     color: #222831; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
+}
+
+main {
+    margin-top: 100px;
+    background-color: greenyellow;
 }
 
 /* Estiliza as seções da página */
@@ -106,4 +113,5 @@ footer {
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+    position: fixed;
 }
